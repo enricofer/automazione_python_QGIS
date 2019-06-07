@@ -1,0 +1,270 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option name="children" type="Map">
+    <Option name="grass7:r.drain_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="grass7:r.drain"/>
+      <Option name="component_description" type="QString" value="r.drain - Traces a flow through an elevation model on a raster map."/>
+      <Option name="component_pos_x" type="double" value="467"/>
+      <Option name="component_pos_y" type="double" value="155"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="grass7:r.drain_1"/>
+      <Option name="outputs" type="Map">
+        <Option name="profilo di valle" type="Map">
+          <Option name="child_id" type="QString" value="grass7:r.drain_1"/>
+          <Option name="component_description" type="QString" value="profilo di valle"/>
+          <Option name="component_pos_x" type="double" value="649"/>
+          <Option name="component_pos_y" type="double" value="212"/>
+          <Option name="name" type="QString" value="profilo di valle"/>
+          <Option name="output_name" type="QString" value="drain"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" type="bool" value="false"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="-a" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="-c" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="-d" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="-n" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="GRASS_MIN_AREA_PARAMETER" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="double" value="0.0001"/>
+          </Option>
+        </Option>
+        <Option name="GRASS_OUTPUT_TYPE_PARAMETER" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="GRASS_RASTER_FORMAT_META" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="Unknown" value=""/>
+          </Option>
+        </Option>
+        <Option name="GRASS_RASTER_FORMAT_OPT" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="Unknown" value=""/>
+          </Option>
+        </Option>
+        <Option name="GRASS_REGION_CELLSIZE_PARAMETER" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="double" value="0"/>
+          </Option>
+        </Option>
+        <Option name="GRASS_REGION_PARAMETER" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="Unknown" value=""/>
+          </Option>
+        </Option>
+        <Option name="GRASS_SNAP_TOLERANCE_PARAMETER" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="double" value="-1"/>
+          </Option>
+        </Option>
+        <Option name="direction" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value=""/>
+          </Option>
+        </Option>
+        <Option name="input" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="dtm"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="start_coordinates" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="puntodicampionamento"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="start_points" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="Unknown" value=""/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:vectorlayerscatterplot_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="qgis:vectorlayerscatterplot"/>
+      <Option name="component_description" type="QString" value="Vector layer scatterplot"/>
+      <Option name="component_pos_x" type="double" value="464"/>
+      <Option name="component_pos_y" type="double" value="450"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="qgis:vectorlayerscatterplot_1"/>
+      <Option name="outputs" type="Map">
+        <Option name="finale" type="Map">
+          <Option name="child_id" type="QString" value="qgis:vectorlayerscatterplot_1"/>
+          <Option name="component_description" type="QString" value="finale"/>
+          <Option name="component_pos_x" type="double" value="651"/>
+          <Option name="component_pos_y" type="double" value="512"/>
+          <Option name="name" type="QString" value="finale"/>
+          <Option name="output_name" type="QString" value="OUTPUT"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="script:measure_elev_on_dtm_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT_LAYER"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="XFIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="step"/>
+          </Option>
+        </Option>
+        <Option name="YFIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="elevation"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="script:measure_elev_on_dtm_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="script:measure_elev_on_dtm"/>
+      <Option name="component_description" type="QString" value="Measure elevation on dtm"/>
+      <Option name="component_pos_x" type="double" value="501"/>
+      <Option name="component_pos_y" type="double" value="331"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="script:measure_elev_on_dtm_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="false"/>
+      <Option name="parameters_collapsed" type="bool" value="false"/>
+      <Option name="params" type="Map">
+        <Option name="DTM_LAYER" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="dtm"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="INPUT_LAYER" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="grass7:r.drain_1"/>
+            <Option name="output_name" type="QString" value="drain"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="MEASURE" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="misuradicampionamento"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option name="model_group" type="QString" value="mio"/>
+  <Option name="model_name" type="QString" value="profilo della valle"/>
+  <Option name="parameterDefinitions" type="Map">
+    <Option name="dtm" type="Map">
+      <Option name="default" type="Unknown" value=""/>
+      <Option name="description" type="QString" value="DTM"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="dtm"/>
+      <Option name="parameter_type" type="QString" value="raster"/>
+    </Option>
+    <Option name="grass7:r.drain_1:profilo di valle" type="Map">
+      <Option name="create_by_default" type="bool" value="true"/>
+      <Option name="data_type" type="int" value="-1"/>
+      <Option name="default" type="Unknown" value=""/>
+      <Option name="description" type="QString" value="profilo di valle"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="grass7:r.drain_1:profilo di valle"/>
+      <Option name="parameter_type" type="QString" value="vectorDestination"/>
+      <Option name="supports_non_file_outputs" type="bool" value="false"/>
+    </Option>
+    <Option name="misuradicampionamento" type="Map">
+      <Option name="data_type" type="int" value="1"/>
+      <Option name="default" type="QString" value="50"/>
+      <Option name="description" type="QString" value="misura di campionamento"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="max" type="double" value="1000"/>
+      <Option name="metadata"/>
+      <Option name="min" type="double" value="1"/>
+      <Option name="name" type="QString" value="misuradicampionamento"/>
+      <Option name="parameter_type" type="QString" value="number"/>
+    </Option>
+    <Option name="puntodicampionamento" type="Map">
+      <Option name="default" type="QString" value=""/>
+      <Option name="description" type="QString" value="punto di campionamento"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="puntodicampionamento"/>
+      <Option name="parameter_type" type="QString" value="point"/>
+    </Option>
+    <Option name="qgis:vectorlayerscatterplot_1:finale" type="Map">
+      <Option name="create_by_default" type="bool" value="true"/>
+      <Option name="default" type="Unknown" value=""/>
+      <Option name="description" type="QString" value="finale"/>
+      <Option name="file_filter" type="QString" value="HTML files (*.html)"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="qgis:vectorlayerscatterplot_1:finale"/>
+      <Option name="parameter_type" type="QString" value="fileDestination"/>
+      <Option name="supports_non_file_outputs" type="bool" value="true"/>
+    </Option>
+  </Option>
+  <Option name="parameters" type="Map">
+    <Option name="dtm" type="Map">
+      <Option name="component_description" type="QString" value="dtm"/>
+      <Option name="component_pos_x" type="double" value="177"/>
+      <Option name="component_pos_y" type="double" value="66"/>
+      <Option name="name" type="QString" value="dtm"/>
+    </Option>
+    <Option name="misuradicampionamento" type="Map">
+      <Option name="component_description" type="QString" value="misuradicampionamento"/>
+      <Option name="component_pos_x" type="double" value="164"/>
+      <Option name="component_pos_y" type="double" value="283"/>
+      <Option name="name" type="QString" value="misuradicampionamento"/>
+    </Option>
+    <Option name="puntodicampionamento" type="Map">
+      <Option name="component_description" type="QString" value="puntodicampionamento"/>
+      <Option name="component_pos_x" type="double" value="168"/>
+      <Option name="component_pos_y" type="double" value="206"/>
+      <Option name="name" type="QString" value="puntodicampionamento"/>
+    </Option>
+  </Option>
+</Option>
