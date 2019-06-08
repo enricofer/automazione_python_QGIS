@@ -28,9 +28,15 @@ Qt è un framework applicativo open-source sviluppato da Nokia per costruire int
 
 ### PyQt
 
-il modulo di collegamento (*bindings*) si chiama PyQt e può essere importato in un programma Python per controllare i widget dell'interfaccia utente ed eseguire comandi e funzioni personalizzate.
+il modulo di collegamento a QT (*bindings*) si chiama PyQt e può essere importato in un programma Python per controllare i widget dell'interfaccia utente ed eseguire comandi e funzioni personalizzate.
 [moduli di Qt](http://doc.qt.io/qt-4.8/modules.html)
 [API di PyQt](http://pyqt.sourceforge.net/Docs/PyQt4/modules.html)
+
+### PyQGIS
+
+Il modulo di collegamento a QGIS si chiama PyQGIS
+
+[API di PyQGIS](#/3/2)
 
 --
 
@@ -38,7 +44,7 @@ il modulo di collegamento (*bindings*) si chiama PyQt e può essere importato in
 
 - Console di python
 
-  Consente di eseguire istruzioni python da riga di comando e di eseguire procedure automatiche che non necessitano di interfaccia grafica
+  Python da riga di comando ed esecuzione di procedure utente.
 
 - Creazione di funzioni personalizzate
 
@@ -46,11 +52,11 @@ il modulo di collegamento (*bindings*) si chiama PyQt e può essere importato in
 
 - Creazione di Azioni
 
-  è possibile associare una funzione python a determinate interazioni con il layer sulla mappa e sulla tabella degli attributi.
+  procedure associate ad interazioni con il layer sulla mappa e sulla tabella degli attributi.
 
 - Macro a livello di progetto
 
-  E' possibile eseguire delle procedure automatiche in corrispondenza di determinati eventi a livello di progetto (salvataggio, apertura, chiusura)
+  procedure automatiche in corrispondenza di determinati eventi a livello di progetto 
 
 - Esecuzione di Algoritmi personalizzati di processing
 
@@ -257,13 +263,9 @@ def algoritmo_di_processing(instance, parameters, context, feedback, inputs):
 
 --
 
-## Esecuzione dello script
-
-si definisce un nuovo script dall'apposito bottone lo script deve prima essere caricato
-
 ### Analisi dello script nei suoi elementi essenziali:
 
-1. Dichiarazione della codifica del testo (UTF-8) )con cui è scritto l'algoritmo (potremo usare lettere accentate..)
+1. Dichiarazione della codifica del testo (UTF-8) con cui è scritto l'algoritmo (potremo usare lettere accentate..)
 
    ```
          # -*- coding: utf-8 -*-
@@ -313,6 +315,8 @@ si definisce un nuovo script dall'apposito bottone lo script deve prima essere c
 
 5. Definizione della funzione di processamento
 
+   riferimento: [definizione di funzioni in python](#/2/16)
+
    ```python
    def algoritmo_di_processing(instance, parameters, context, feedback, inputs):
    ```
@@ -328,6 +332,11 @@ si definisce un nuovo script dall'apposito bottone lo script deve prima essere c
 --
 
 8. Raccolta dei parametri configurati nell'interfaccia dell'algoritmo. i metodi disponibili sono elencati nell'API di [QgsProcessingAlgorithm](https://qgis.org/api/classQgsProcessingAlgorithm.html#ad8f3de369d3082a2da9498f6de838698)
+
+riferimenti:  
+- [assegnazione di variabili in Python](#/2/2) 
+- [classi e oggetti in python](#/2/26) 
+- [API di QGIS - feature campi e geometrie](#/3/6)
 
    ```python
        sorgente = instance.parameterAsSource(parameters, "INPUT", context)
@@ -346,8 +355,11 @@ si definisce un nuovo script dall'apposito bottone lo script deve prima essere c
 
 9. Il processamento vero e proprio dei dati.
 
-   ```python
+   riferimento: [controllo del flusso in Python](#/2/12) 
+
        for feat in sorgente.getFeatures(): # iteratore per ogni feature contenuta nella
+
+   ```python
            geometry = feat.geometry()
            if geometry.area() > areaMinima*10000:
                destinazione.addFeature(feat)
@@ -1175,6 +1187,8 @@ for feature in layer.getFeatures(request): #solo le feature che corrispondono al
 
 ## Layers Vettoriali - oggetto QgsFeature
 
+[QgsFeature()](https://qgis.org/api/classQgsFeature.html): gestione delle singole entità in geometria e attributi
+
 ```
 #PROPRIETA'
 feature.geometry() # la geometria legata alla feature (QgsGeometry)
@@ -1228,9 +1242,13 @@ layer.rollbackChanges() #cancellazione delle modifiche effettuate
 
 ## layers vettoriali - oggetto geometria
 
+[QgsGeometry()](https://qgis.org/api/classQgsGeometry.html): permette la manipolazione delle geometrie
+
 [geometria WKT - Well-Known Text](https://it.wikipedia.org/wiki/Well-Known_Text)
 
 [geometria geojson](http://geojson.org/)
+
+
 
 ```
 #METODI COSTRUTTORI
