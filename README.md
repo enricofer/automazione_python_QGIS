@@ -480,7 +480,7 @@ print "Questa stringa\nviene stampata\nin tre righe"
 print ("C:\Users\enrico")
 
 # Si può usare una stringa grezza tralasciando le sequenze di escape
-print ()r"C:\Users\enrico")
+print (r"C:\Users\enrico")
 
 #Uso del set di caratteri esteso (unicode - UTF8) (Python 2)
 print (u"questo è qgis")
@@ -517,7 +517,7 @@ print ("mi chiamo {1} {0} alto {2:d} cm ed ho percorso {3:.1f} km".format(a,b,c,
 ```python
 True
 
-False (None, [], {})
+False (None, 0, "", [], {})
 
 # operatori
 not True # False
