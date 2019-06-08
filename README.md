@@ -218,8 +218,8 @@ Il Framework processing può essere facilmente esteso aggiungendo degli strument
 
 ## Il nuovo stile di implementazione a "decoratori"
 
-[Dataset di esempio](py/processing__01.zip)
-[processing__01.py](py/processing__01.py)
+[Dataset di esempio](py/dataset.zip)
+[processing__01.py](py/processing_01.py)
 
 ```python
 # -*- coding: utf-8 -*-
