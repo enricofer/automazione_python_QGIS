@@ -1288,7 +1288,7 @@ geom1.asJson() trasformazione in oggetto geometria di geojson
 
 Oltre ad elaborare i parametri in input per restituire un layer pronto all'uso in qgis, il framework processing consente di restituire anche altri tipi di output. In questo esempio restituisce un file html
 
-[processing_02.py](doc/processing_02.py)
+[processing_02.py](py/processing_02.py)
 
 ```python
 # -*- coding: utf-8 -*-
@@ -1341,7 +1341,7 @@ def algoritmo_di_processing(instance, parameters, context, feedback, inputs):
 
 ## Esportazione in formato GeoPackage (gpkg)
 
-[processing_03.py](doc/processing_03.py)
+[processing_03.py](py/processing_03.py)
 
 ```python
 # -*- coding: utf-8 -*-
@@ -1388,7 +1388,7 @@ def algoritmo_di_processing(instance, parameters, context, feedback, inputs):
 
 ## Campionamento di un Raster lungo una linea
 
-[processing_04.py](doc/processing_04.py)
+[processing_04.py](py/processing_04.py)
 
 ```python
 # -*- coding: utf-8 -*-
